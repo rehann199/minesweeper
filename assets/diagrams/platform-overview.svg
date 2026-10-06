@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 640" role="img" aria-labelledby="t d">
+  <title id="t">Minesweeper platform overview</title>
+  <desc id="d">Four platforms built from three codebases. One Flutter codebase covers Android phone and tablet plus iOS. A separate Flutter fork covers Android TV. A native Swift and SwiftUI app covers Apple TV. All three implement the same game design: lazy first-move-safe board generation, iterative flood fill, flagging, scoring, hints and bomb recovery.</desc>
+  <defs>
+    <style>
+      text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #e6ecff; }
+      .h { font-size: 26px; font-weight: 700; }
+      .s { font-size: 15px; fill: #9fb0d9; }
+      .b { font-size: 15px; }
+      .p { font-size: 13px; }
+      .k { font-size: 13px; fill: #8ea2d8; letter-spacing: 1.4px; font-weight: 700; }
+      .mob { fill: #12304a; stroke: #2f7fc1; stroke-width: 2; }
+      .tv  { fill: #3a2414; stroke: #d9822b; stroke-width: 2; }
+      .tvos { fill: #2a1a3d; stroke: #9a6fe0; stroke-width: 2; }
+      .sh  { fill: #1a2a55; stroke: #5b78d6; stroke-width: 2; }
+      .plat { fill: #0d1830; stroke: #3b5190; stroke-width: 1.2; }
+      .arrow { stroke: #5b78d6; stroke-width: 2; fill: none; }
+    </style>
+  </defs>
+  <rect width="1200" height="640" rx="16" fill="#0b1020"/>
+  <text x="40" y="50" class="h">Minesweeper: four platforms, three codebases, one game design</text>
+  <text x="40" y="76" class="s">Identical rules everywhere; input, layout and platform services are implemented natively for each form factor.</text>
+
+  <rect x="40" y="100" width="1120" height="118" rx="12" class="sh"/>
+  <text x="60" y="128" class="k">SHARED GAME DESIGN (SAME SEMANTICS ON EVERY PLATFORM)</text>
+  <text x="60" y="158" class="b">Board created lazily on first reveal · 3x3 first-move exclusion zone · rejection-sampled mine placement</text>
+  <text x="60" y="184" class="b">Iterative stack-based flood fill on an immutable grid · flag toggle · win and loss detection · live scoring</text>
+  <text x="60" y="210" class="b">Hints · bomb recovery · three presets plus custom boards (purchase or rewarded unlock) · top-10 high scores per preset</text>
+
+  <path d="M200 218 V262" class="arrow"/>
+  <path d="M600 218 V262" class="arrow"/>
+  <path d="M1000 218 V262" class="arrow"/>
+
+  <rect x="40" y="262" width="380" height="250" rx="12" class="mob"/>
+  <text x="60" y="290" class="k">CODEBASE 1 · FLUTTER / DART</text>
+  <rect x="60" y="306" width="200" height="44" rx="8" class="plat"/>
+  <text x="74" y="334" class="b p">Android phone / tablet</text>
+  <rect x="270" y="306" width="130" height="44" rx="8" class="plat"/>
+  <text x="284" y="334" class="b p">iPhone / iPad</text>
+  <text x="60" y="380" class="b">Touch: tap-up reveal, long-press flag</text>
+  <text x="60" y="404" class="b">Pinch / pan zoom · haptics · 15 languages</text>
+  <text x="60" y="428" class="b">Ad mediation with remote kill-switches</text>
+  <text x="60" y="452" class="b">Native Play Billing / StoreKit bridges</text>
+  <text x="60" y="476" class="b">Staged startup with consent and timeouts</text>
+  <text x="60" y="500" class="b">Riverpod state · portrait</text>
+
+  <rect x="440" y="262" width="360" height="250" rx="12" class="tv"/>
+  <text x="460" y="290" class="k">CODEBASE 2 · FLUTTER FORK</text>
+  <rect x="460" y="306" width="165" height="44" rx="8" class="plat"/>
+  <text x="476" y="334" class="b">Android TV</text>
+  <text x="460" y="380" class="b">D-pad focus model, hand-managed</text>
+  <text x="460" y="404" class="b">Hold-select to flag · back pauses</text>
+  <text x="460" y="428" class="b">Rewarded and interstitial ads SDK</text>
+  <text x="460" y="452" class="b">Native Play Billing bridge (Kotlin)</text>
+  <text x="460" y="476" class="b">Throttled focus telemetry</text>
+  <text x="460" y="500" class="b">Riverpod state · landscape</text>
+
+  <rect x="820" y="262" width="340" height="250" rx="12" class="tvos"/>
+  <text x="840" y="290" class="k">CODEBASE 3 · SWIFT / SWIFTUI</text>
+  <rect x="840" y="306" width="165" height="44" rx="8" class="plat"/>
+  <text x="856" y="334" class="b">Apple TV</text>
+  <text x="840" y="380" class="b">Siri Remote press tracker (UIKit)</text>
+  <text x="840" y="404" class="b">Custom board cursor, no focus engine</text>
+  <text x="840" y="428" class="b">Game logic hand-ported to Swift</text>
+  <text x="840" y="452" class="b">StoreKit 2 purchases</text>
+  <text x="840" y="476" class="b">No ad SDK · no third-party packages</text>
+  <text x="840" y="500" class="b">ObservableObject state · landscape</text>
+
+  <rect x="40" y="540" width="1120" height="68" rx="12" class="plat"/>
+  <text x="60" y="568" class="k">TRADE-OFF</text>
+  <text x="60" y="592" class="b">No shared package: UI and services are duplicated, and the core game logic has no dedicated unit tests.</text>
+</svg>
