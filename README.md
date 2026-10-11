@@ -17,6 +17,7 @@ Flutter · Dart · Kotlin · Swift · SwiftUI · Firebase · Play Billing · Sto
 ![Android TV](https://img.shields.io/badge/Android%20TV-D9822B?logo=androidtv&logoColor=white)
 ![Apple TV](https://img.shields.io/badge/Apple%20TV-1D1D1F?logo=apple&logoColor=white)
 ![Firebase](https://img.shields.io/badge/Firebase-FFCA28?logo=firebase&logoColor=black)
+![For sale](https://img.shields.io/badge/Product-For%20sale-7C4DFF)
 
 <table>
   <tr>
@@ -33,9 +34,16 @@ Flutter · Dart · Kotlin · Swift · SwiftUI · Firebase · Play Billing · Sto
 ## Get the App
 
 <p>
-  <a href="https://play.google.com/store/apps/details?id=com.futurewatch.minesweeper&hl=en"><img alt="Get it on Google Play" src="https://img.shields.io/badge/Google%20Play-Phone%2C%20tablet%20and%20Android%20TV-414141?style=for-the-badge&logo=googleplay&logoColor=white" /></a>
   <a href="https://apps.apple.com/pk/app/minesweeper-puzzle-game/id6766427737"><img alt="Download on the App Store" src="https://img.shields.io/badge/App%20Store-iPhone%2C%20iPad%20and%20Apple%20TV-0D96F6?style=for-the-badge&logo=apple&logoColor=white" /></a>
 </p>
+
+<!-- fw-sale:start -->
+## Reach & Availability
+
+| | |
+|---|---|
+| **Product sale** | This is a Future Watch product and it is **available to buy or license** for your own business. [Ask about buying Minesweeper](https://futurewatch.co/contact?type=product&ref=minesweeper) or email [rehan@futurewatch.co](mailto:rehan@futurewatch.co). |
+<!-- fw-sale:end -->
 
 ## Product at a Glance
 
